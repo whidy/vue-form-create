@@ -15,9 +15,9 @@
 
       <el-form-item label="组件尺寸">
         <el-radio-group v-model="data.size">
-          <el-radio-button label="medium">大</el-radio-button>
+          <el-radio-button label="default">大</el-radio-button>
           <el-radio-button label="small">默认</el-radio-button>
-          <el-radio-button label="mini">小</el-radio-button>
+          <el-radio-button label="small">小</el-radio-button>
         </el-radio-group>
       </el-form-item>
 

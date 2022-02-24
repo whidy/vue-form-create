@@ -75,17 +75,17 @@
       </el-main>
 
       <el-dialog v-model="uploadJsonVisible" title="导入JSON" :width="800">
-        <a-alert
+        <el-alert
           type="info"
           message="JSON格式如下，直接复制生成的json覆盖此处代码点击确定即可"
           style="margin-bottom: 10px"
         />
         <CodeEditor v-model:value="jsonEg" language="json" />
         <template #footer>
-          <el-button size="medium" @click="() => (uploadJsonVisible = false)"
+          <el-button size="default" @click="() => (uploadJsonVisible = false)"
             >取消</el-button
           >
-          <el-button type="primary" size="medium" @click="handleUploadJson"
+          <el-button type="primary" size="default" @click="handleUploadJson"
             >导入</el-button
           >
         </template>
@@ -98,8 +98,8 @@
           :data="widgetForm"
         />
         <template #footer>
-          <el-button size="medium" @click="handleReset">重置</el-button>
-          <el-button type="primary" size="medium" @click="handleGetData"
+          <el-button size="default" @click="handleReset">重置</el-button>
+          <el-button type="primary" size="default" @click="handleGetData"
             >获取数据</el-button
           >
         </template>
@@ -108,12 +108,12 @@
           <CodeEditor :value="dataJsonTemplate" language="json" readonly />
 
           <template #footer>
-            <el-button size="medium" @click="() => (dataJsonVisible = false)"
+            <el-button size="default" @click="() => (dataJsonVisible = false)"
               >取消</el-button
             >
             <el-button
               type="primary"
-              size="medium"
+              size="default"
               @click="handleCopyClick(dataJsonTemplate)"
               >Copy</el-button
             >
@@ -125,12 +125,12 @@
         <CodeEditor :value="generateJsonTemplate" language="json" readonly />
 
         <template #footer>
-          <el-button size="medium" @click="() => (generateJsonVisible = false)"
+          <el-button size="default" @click="() => (generateJsonVisible = false)"
             >取消</el-button
           >
           <el-button
             type="primary"
-            size="medium"
+            size="default"
             @click="handleCopyClick(generateJsonTemplate)"
             >Copy</el-button
           >
@@ -138,7 +138,7 @@
       </el-dialog>
 
       <el-dialog v-model="dataCodeVisible" title="生产代码" :width="800">
-        <a-tabs
+        <!-- <a-tabs
           type="card"
           v-model:activeKey="codeLanguage"
           :tabBarStyle="{ margin: 0 }"
@@ -149,15 +149,15 @@
           <a-tab-pane tab="HTML" :key="codeType.Html">
             <CodeEditor :value="dataCodeTemplate" language="html" readonly />
           </a-tab-pane>
-        </a-tabs>
+        </a-tabs> -->
 
         <template #footer>
-          <el-button size="medium" @click="() => (dataCodeVisible = false)"
+          <el-button size="default" @click="() => (dataCodeVisible = false)"
             >取消</el-button
           >
           <el-button
             type="primary"
-            size="medium"
+            size="default"
             @click="handleCopyClick(dataCodeTemplate)"
             >Copy</el-button
           >

@@ -4,7 +4,7 @@
     <el-button
       v-if="$attrs.uploadJson"
       type="text"
-      size="medium"
+      size="default"
       @click="$emit('uploadJson')"
     >
       <template #icon>
@@ -15,7 +15,7 @@
     <el-button
       v-if="$attrs.clearable"
       type="text"
-      size="medium"
+      size="default"
       @click="$emit('clearable')"
     >
       <template #icon>
@@ -26,7 +26,7 @@
     <el-button
       v-if="$attrs.preview"
       type="text"
-      size="medium"
+      size="default"
       @click="$emit('preview')"
     >
       <template #icon>
@@ -37,7 +37,7 @@
     <el-button
       v-if="$attrs.generateJson"
       type="text"
-      size="medium"
+      size="default"
       @click="$emit('generateJson')"
     >
       <template #icon>
@@ -48,7 +48,7 @@
     <el-button
       v-if="$attrs.generateCode"
       type="text"
-      size="medium"
+      size="default"
       @click="$emit('generateCode')"
     >
       <template #icon>

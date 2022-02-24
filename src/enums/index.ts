@@ -4,6 +4,5 @@ export enum CodeType {
 }
 
 export enum PlatformType {
-  Antd,
   Element
 }
