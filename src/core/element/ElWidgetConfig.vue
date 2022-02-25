@@ -1,5 +1,5 @@
 <template>
-  <el-form label-position="top" size="small" v-if="data" :key="data.key">
+  <el-form label-position="top" size="default" v-if="data" :key="data.key">
     <el-form-item label="字段标识" v-if="data.type !== 'grid'">
       <el-input v-model="data.model" />
     </el-form-item>
@@ -210,7 +210,7 @@
               :list="data.options.options"
             >
               <template #item="{ element, index }">
-                <el-space direction="vertical" size="small">
+                <el-space direction="vertical" size="default">
                   <div>
                     <el-radio
                       :label="element.value"
