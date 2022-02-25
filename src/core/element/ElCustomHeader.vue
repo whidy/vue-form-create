@@ -1,60 +1,20 @@
 <template>
   <el-header class="btn-bar">
     <slot></slot>
-    <el-button
-      v-if="$attrs.uploadJson"
-      type="text"
-      size="default"
-      @click="$emit('uploadJson')"
-    >
-      <template #icon>
-        <SvgIcon iconClass="upload" />
-      </template>
-      导入JSON
+    <el-button v-if="$attrs.uploadJson" type="text" size="default" @click="$emit('uploadJson')">
+      <SvgIcon iconClass="upload" />导入JSON
     </el-button>
-    <el-button
-      v-if="$attrs.clearable"
-      type="text"
-      size="default"
-      @click="$emit('clearable')"
-    >
-      <template #icon>
-        <SvgIcon iconClass="clearable" />
-      </template>
-      清空
+    <el-button v-if="$attrs.clearable" type="text" size="default" @click="$emit('clearable')">
+      <SvgIcon iconClass="clearable" />清空
     </el-button>
-    <el-button
-      v-if="$attrs.preview"
-      type="text"
-      size="default"
-      @click="$emit('preview')"
-    >
-      <template #icon>
-        <SvgIcon iconClass="preview" />
-      </template>
-      预览
+    <el-button v-if="$attrs.preview" type="text" size="default" @click="$emit('preview')">
+      <SvgIcon iconClass="preview" />预览
     </el-button>
-    <el-button
-      v-if="$attrs.generateJson"
-      type="text"
-      size="default"
-      @click="$emit('generateJson')"
-    >
-      <template #icon>
-        <SvgIcon iconClass="generate-json" />
-      </template>
-      生成JSON
+    <el-button v-if="$attrs.generateJson" type="text" size="default" @click="$emit('generateJson')">
+      <SvgIcon iconClass="generate-json" />生成JSON
     </el-button>
-    <el-button
-      v-if="$attrs.generateCode"
-      type="text"
-      size="default"
-      @click="$emit('generateCode')"
-    >
-      <template #icon>
-        <SvgIcon iconClass="generate-code" />
-      </template>
-      生成代码
+    <el-button v-if="$attrs.generateCode" type="text" size="default" @click="$emit('generateCode')">
+      <SvgIcon iconClass="generate-code" />生成代码
     </el-button>
   </el-header>
 </template>
