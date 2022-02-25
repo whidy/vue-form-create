@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import MyDesignForm from './core/element/ElDesignForm.vue'
+import MyDesignForm from './core/ElDesignForm.vue'
 
 </script>
 
